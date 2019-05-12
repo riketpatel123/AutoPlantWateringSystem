@@ -1,0 +1,42 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	  <title>{{ title }}</title>
+	</head> 
+
+	<body style="background-color:black;">
+	<div class="container" style="background-image:url(static/plantw1.jpg); background-color:black; height:100vh;">
+	  <br>
+	  <h1 class="text-white"><u><strong>Internet of Things</strong></u> - <i>Autowatering Plants with Raspberry Pi!</i></h1>
+	  <br><br>
+	<div class="container" style="text-align:left; background-color: #e2edff; padding:20px; border-radius: 25px;">
+	  <h2 class="text-primary">Current time: {{ time }}</h2>
+	  <h2 class="text-primary"> {{ text }} </h2>
+	</div>
+	<br><br>
+	<div class="container" style="text-align:left; background-color: #e2edff; padding:20px; border-radius: 25px;">
+	  <h2 Class="text-primary">Last Event:</h2>
+	  <h5 Class="text-primary">{{ event }}</h5>
+	</div>
+	<br>
+	<div class="container" style="text-align:center; background-color: #e2edff; padding:20px; border-radius: 25px;">
+	  
+	  <h2 class="text-primary">Click on the buttons below to check the Status</h2>
+		<a href="/sensor"><button type="button" class="btn btn-outline-dark">Soil Status</button></a> 
+		<a href="/water"><button type="button" class="btn btn-outline-dark">Check Water Once</button></a>
+		<a href="/last_watered"><button type="button" class="btn btn-outline-dark">Last Watered</button></a>
+	  <br><br>
+	  <h2 class="text-primary">Auto Watering System<div class="spinner-grow text-primary"></div></h2>
+		<a href="/auto/water/ON"><button id="btnOn" type="button" class="btn btn-outline-success">ON</button></a>
+		<a href="/auto/water/OFF"><button type="button" class="btn btn-outline-danger">OFF</button></a>
+	</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</div>
+	</body>
+	</html>
