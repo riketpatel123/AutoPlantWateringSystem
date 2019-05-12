@@ -6,11 +6,11 @@ import os #This import is used in auto_water for running operating systems cmd c
 
 app = Flask(__name__)
 
-#Author: Smitkumar Patel
+#Author: Riket Patel
 #Function Name: template
 #Parameters: 3 - title, text , event - title of the main page , status text, to show the last watered event
 #Date: March 14, 2019
-#Returns: templateDate 
+#Returns: templateDate
 def template(title = "Raspberry Pi Auto Planting!", text = "",event = ""):
     now = datetime.datetime.now()
     timeString = now
@@ -22,19 +22,19 @@ def template(title = "Raspberry Pi Auto Planting!", text = "",event = ""):
         }
     return templateDate
 
-#Author: Smitkumar Patel
+#Author: Riket Patel
 #Function Name: home
-#Parameters:  0 
+#Parameters:  0
 #Date: March 14, 2019
-#Returns: render_template (main.html)   
+#Returns: render_template (main.html)
 @app.route("/")
 def home():
     templateData = template()
     return render_template('main.html', **templateData)
 
-#Author: Smitkumar Patel
+#Author:RiketS Patel
 #Function Name: check_last_watered
-#Parameters:  0 
+#Parameters:  0
 #Date: March 14, 2019
 #Returns: render_template (main.html)
 @app.route("/last_watered")
@@ -44,7 +44,7 @@ def check_last_watered():
 
 #Author: Riket Patel
 #Function Name: check_sensor_status
-#Parameters:  0 
+#Parameters:  0
 #Date: March 14, 2019
 #Returns: render_template (main.html)
 @app.route("/sensor")
@@ -62,7 +62,7 @@ def check_sensor_status():
 
 #Author: Riket Patel
 #Function Name: watered_once
-#Parameters:  0 
+#Parameters:  0
 #Date: March 18, 2019
 #Returns: render_template (main.html)
 @app.route("/water")
